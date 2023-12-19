@@ -5,8 +5,8 @@
 body {
     background: linear-gradient(90deg, rgb(68, 68, 231), 
     rgb(186, 238, 238));
-    height: 100%;
-    user-select: none;
+    height: 100vh;
+    -webkit-user-selectuser-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,17 @@ body {
     padding: 0.5vh;
     border-radius: 0.5vh;
     display: grid;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(11, auto);
     grid-template-rows: repeat(20, auto);
+    /* margin: 100px; */
 }
 .tetris div{
     height: min(4vh, 7vh);
     width: min(4vh, 7vh);
     background-color: rgba(97, 75, 75, 0.205);
     border-radius: 0.3vh;
-    box-shadow: inset 2px 2px 2px grey,
-                inset 2px 2px 2px grey;
+    box-shadow: inset 1px 1px 1px grey,
+                inset 1px 1px 1px grey;
 }
 
 .tetris .O {
