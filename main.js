@@ -55,9 +55,10 @@ const TETROMINOES = {
         [0, 1, 0]
     ],
     'I': [
-        [0, 1, 0],
-        [0, 1, 0],
-        [0, 1, 0]
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
     ],
     'T_2': [
         [1, 1, 1],
@@ -112,19 +113,19 @@ function generateTetromino(){
 }
 generateTetromino();
 
-// function generateTetromino(){
-//     const nameTetro = 'L';
-//     const matrixTetro = TETROMINOES[nameTetro];
-//     const columnTetro = 4;
-//     const rowTetro   = 2;
-//     tetromino = {
-//         name: nameTetro,
-//         matrix: matrixTetro,
-//         row: rowTetro,
-//         column: columnTetro,
-//     }
-// }
-// generateTetromino();
+function generateTetromino(){
+    const nameTetro = 'L';
+    const matrixTetro = TETROMINOES[nameTetro];
+    const columnTetro = 4;
+    const rowTetro   = 2;
+    tetromino = {
+        name: nameTetro,
+        matrix: matrixTetro,
+        row: rowTetro,
+        column: columnTetro,
+    }
+}
+generateTetromino();
 
 
 
