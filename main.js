@@ -97,7 +97,6 @@ generateTetromino();
 
 
 const cells = document.querySelectorAll('.tetris div');
-// console.log(cells)
 
 
 
@@ -159,9 +158,6 @@ function onKeyDown(event) {
         case 'ArrowRight':
             moveTetrominoRight();
             break;
-        // case 'ArrowUp':
-        //     moveTetrominoUp();
-        //     break;
     }
     draw();
 }
@@ -171,12 +167,6 @@ function moveTetrominoDown(){
         tetromino.row -= 1;
         }
 }
-// function moveTetrominoUp(){
-//     tetromino.row -= 1;
-//     if(isOutsideOfGameBoard()){
-//         tetromino.row += 1;
-//         }
-// }
 function moveTetrominoLeft(){
     tetromino.column -= 1;
     if(isOutsideOfGameBoard()){
