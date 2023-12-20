@@ -112,18 +112,18 @@ function generateTetromino(){
 }
 generateTetromino();
 
-function generateTetromino(){
-    const nameTetro = 'L';
-    const matrixTetro = TETROMINOES[nameTetro];
-    const columnTetro = 4;
-    const rowTetro   = 2;
-    tetromino = {
-        name: nameTetro,
-        matrix: matrixTetro,
-        row: rowTetro,
-        column: columnTetro,
-    }
-}
+// function generateTetromino(){
+//     const nameTetro = 'L';
+//     const matrixTetro = TETROMINOES[nameTetro];
+//     const columnTetro = 4;
+//     const rowTetro   = 2;
+//     tetromino = {
+//         name: nameTetro,
+//         matrix: matrixTetro,
+//         row: rowTetro,
+//         column: columnTetro,
+//     }
+// }
 // generateTetromino();
 
 
