@@ -57,7 +57,9 @@ const TETROMINOES = {
 let playfield; 
 let tetromino;
 
-
+function getRandomElement(array){
+    const randomIndex = Math.floor(Math.random() * array)
+}
 
 
 function convertPositionToIndex(row, column){

@@ -37,3 +37,15 @@ body {
 .tetris .L {
     background: green;
 }
+.tetris .T {
+    background: rgb(41, 118, 148);
+}
+.tetris .J {
+    background: rgb(197, 196, 144);
+}
+.tetris .S {
+    background: rgb(175, 34, 194);
+}
+.tetris .Z {
+    background: rgb(180, 34, 102);
+}
