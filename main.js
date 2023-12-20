@@ -18,6 +18,9 @@ const TETROMINO_NAMES = [
     'S',
     'Z',
     'T',
+    'I',
+    'T_2',
+    'U'
 ];
 
 
@@ -50,6 +53,21 @@ const TETROMINOES = {
         [1, 1, 1],
         [0, 1, 0],
         [0, 1, 0]
+    ],
+    'I': [
+        [0, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0]
+    ],
+    'T_2': [
+        [1, 1, 1],
+        [0, 1, 0],
+        [0, 0, 0]
+    ],
+    'U': [
+        [1, 0, 1],
+        [1, 1, 1],
+        [0, 0, 0]
     ],
 };
 
@@ -93,6 +111,20 @@ function generateTetromino(){
     }
 }
 generateTetromino();
+
+function generateTetromino(){
+    const nameTetro = 'L';
+    const matrixTetro = TETROMINOES[nameTetro];
+    const columnTetro = 4;
+    const rowTetro   = 2;
+    tetromino = {
+        name: nameTetro,
+        matrix: matrixTetro,
+        row: rowTetro,
+        column: columnTetro,
+    }
+}
+// generateTetromino();
 
 
 
@@ -159,9 +191,9 @@ function onKeyDown(event) {
         case 'ArrowRight':
             moveTetrominoRight();
             break;
-        // case 'ArrowUp':
-        //     moveTetrominoUp();
-        //     break;
+        case 'ArrowUp':
+            moveTetrominoUp();
+            break;
     }
     draw();
 }
@@ -171,12 +203,12 @@ function moveTetrominoDown(){
         tetromino.row -= 1;
         }
 }
-// function moveTetrominoUp(){
-//     tetromino.row -= 1;
-//     if(isOutsideOfGameBoard()){
-//         tetromino.row += 1;
-//         }
-// }
+function moveTetrominoUp(){
+    tetromino.row -= 1;
+    if(isOutsideOfGameBoard()){
+        tetromino.row += 1;
+        }
+}
 function moveTetrominoLeft(){
     tetromino.column -= 1;
     if(isOutsideOfGameBoard()){
@@ -225,3 +257,48 @@ function placeTetromino(){
     generateTetromino();
 }
 
+
+// // ---------------------------
+// //  ---- Рандомна фігура ----
+// // ---------------------------
+// function getRandomTetromino() {
+//   // Масив всіх можливих фігур
+//   // const tetrominos = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'];
+  
+//   // Випадкове вибрання фігури з масиву
+//   const randomIndex = Math.floor(Math.random() * TETROMINO_NAMES.length);
+//   return TETROMINO_NAMES[randomIndex];
+// }
+
+// // Виклик функції та виведення результату
+// const randomTetromino = getRandomTetromino();
+// console.log('Випадкова фігура: ' + randomTetromino);
+// // ---------------------------
+// // ---------------------------
+// // ---------------------------
+
+// // ---------------------------
+// // -- Приклад функції, яка генерує випадковий колір для кожної нової фігури:
+// // ---------------------------
+// function getRandomColor() {
+//   const letters = '0123456789ABCDEF';
+//   let color = '#';
+//   for (let i = 0; i < 6; i++) {
+//     color += letters[Math.floor(Math.random() * 16)];
+//   }
+//   return color;
+// }
+
+// function getRandomTetrominoWithColor() {
+//   const randomIndex = Math.floor(Math.random() * TETROMINO_NAMES.length);
+//   const randomTetromino = TETROMINO_NAMES[randomIndex];
+//   const randomColor = getRandomColor();
+//   return { TETROMINO_NAMES: randomTetromino, color: randomColor };
+// }
+
+// const randomTetrominoWithColor = getRandomTetrominoWithColor();
+// console.log('Випадкова фігура: ' + randomTetrominoWithColor.TETROMINO_NAMES);
+// console.log('Колір для фігури: ' + randomTetrominoWithColor.color);
+// // ---------------------------
+// // ---------------------------
+// // ---------------------------

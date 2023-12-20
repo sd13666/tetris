@@ -19,7 +19,6 @@ body {
     display: grid;
     grid-template-columns: repeat(11, auto);
     grid-template-rows: repeat(20, auto);
-    /* margin: 100px; */
 }
 .tetris div{
     height: min(4vh, 7vh);
@@ -33,7 +32,24 @@ body {
 .tetris .O {
     background: yellow;
 }
-
 .tetris .L {
     background: green;
+}
+.tetris .J {
+    background: blue;
+}
+.tetris .S {
+    background: red;
+}
+.tetris .Z {
+    background: white;
+}
+.tetris .T {
+    background: peru;
+}
+.tetris .I {
+    background: turquoise;
+}
+.tetris .T_2 {
+    background: turquoise;
 }
